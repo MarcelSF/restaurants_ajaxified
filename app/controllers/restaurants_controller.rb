@@ -5,5 +5,6 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.include(:reviews)
+    @review = Review.new  # <-- You need this now.
   end
 end
