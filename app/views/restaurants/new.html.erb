@@ -1,0 +1,5 @@
+<%= simple_form_for @restaurant do |f|%>
+
+<%= f.input_field :select, :collection => { 'Opt1' => 1, 'Opt2' => 2}, :include_blank => '(All)', :selected => '' %>
+
+<% end %>
