@@ -1,11 +1,17 @@
 <div class="container">
   <div data-controller="counter" class="d-flex justify-content-center mt-4">
-  <div class="counter badge badge-primary p-3 mr-5">
-    <span data-target="counter.count"><%= @restaurant_count %></span>
+    <div class="counter badge badge-primary p-3 mr-5">
+      <span data-target="counter.count"><%= @restaurant_count %></span>
+    </div>
+
+    <button  data-action="click->counter#refresh" class="btn btn-outline-secondary">Refresh counter</button>
   </div>
 
-  <button  data-action="click->counter#refresh" class="btn btn-outline-secondary">Refresh counter</button>
-</div>
+  <div data-controller="test">
+    <p>this is the div where my test controller is!</p>
+    <p data-target="test.div">This is the element that I wish to update!</p>
+    <button data-action="click->test#change_text">Change the text!</button>
+  </div>
 </div>
 
 
